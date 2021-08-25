@@ -1,0 +1,40 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65%;
+    background: #6B47DC;
+}
+
+@media (min-width: 400px) {
+    body{
+        
+        margin-top: 45%;
+        
+    }
+    
+}
+
+@media (min-width: 600px) {
+    body{
+        
+        margin-top: 35%;
+        
+    }
+    
+}
+
+@media (min-width: 800px) {
+    body{
+        
+        margin-top: 20%;
+        
+    }
+    
+}

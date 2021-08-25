@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+body{
+    background: #16161A;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFE;
+}
+
+#cabecera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:40px;
+}
+
+#login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+    
+}
+
+#login h4{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFE;
+}
+
+#enviar{
+    background: #EF4565;
+    color: #FFFFFE;
+    border-radius: 10px;
+    width: 300px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px; 
+}
+
+#login label{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 140px;
+}
+
+#login input{
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;  
+    color: #72757E;
+    border: 1px solid #72757E;
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#login a{
+    color: #2CB67D;
+}
+
+
