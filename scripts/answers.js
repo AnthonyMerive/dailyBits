@@ -1,5 +1,6 @@
 let template = document.getElementById('template').content;
 let items = document.getElementById('items');
+let menu = document.getElementById('menu');
 let fragment = document.createDocumentFragment();
 
 //aleatoriedad entre 1 y 3
@@ -24,4 +25,24 @@ const pintarData = data =>{
         fragment.appendChild(template);
     })
     items.appendChild(fragment);
+
+    let option1 = document.getElementById('option1');
+    let option2 = document.getElementById('option2');
+    let option3 = document.getElementById('option3');
+
+    option1.addEventListener('click', () => {
+        cambiarColorBoton();
+    })
+
+    option2.addEventListener('click', () => {
+        cambiarColorBoton();
+    })
+
+    option3.addEventListener('click', () => {
+        cambiarColorBoton();
+    })
+
+    function cambiarColorBoton(){
+        menu.querySelector('button').setAttribute('id', 'comprobarCambio');
+    }
 }

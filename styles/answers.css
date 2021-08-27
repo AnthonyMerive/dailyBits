@@ -94,7 +94,7 @@ label:before{
     height: 82px;
   }
 
-#comprobar{
+.comprobar{
     border-style: none;
     color: #FFFFFE;
     font-family: 'Rubik' sans-serif;
@@ -109,6 +109,17 @@ label:before{
     border-radius: 16px;
 }
 
-#comprobar:hover{
+#comprobarCambio{
+    border-style: none;
+    color: #FFFFFE;
+    font-family: 'Rubik' sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    width: 328px;
+    height: 48px;
+    margin: 10px 0px;
+    border-radius: 16px;
     background: #6B47DC;
 }
