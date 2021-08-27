@@ -1,0 +1,35 @@
+{
+    "pregunta1": [
+        {
+           "id": 1,
+           "image": "./resources/answers/boy.png",
+           "pregunta": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
+           "op1": "main",
+           "op2": "section",
+           "op3": "header"
+        }
+    ],
+
+    "pregunta2": [
+        {
+            "id": 2,
+            "image": "./resources/answers/girl.png",
+            "pregunta": "¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript?",
+            "op1": "<br>",
+            "op2": "<script>",
+            "op3": "<styles>"
+         }
+    ],
+    
+    "pregunta3":[
+         {
+            "id": 3,
+            "image": "./resources/answers/boy1.png",
+            "pregunta": "¿Qué significa DRY?",
+            "op1": "Don’t repeat yellow",
+            "op2": "Don’t repeat yourself",
+            "op3": "Don’t recicle year"
+         }
+        ]
+
+}
