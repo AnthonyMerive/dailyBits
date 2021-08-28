@@ -4,14 +4,11 @@ let menu = document.getElementById('menu');
 let comprobar = document.querySelector('.comprobar');
 let fragment = document.createDocumentFragment();
 
-let seleccion = false;
+let seleccion;
 let control = [];
 let porcentaje = 0;
 let vida = 0;
 
-window.addEventListener('beforeunload', () =>{
-    alert('reload')
-});
 
 document.addEventListener('DOMContentLoaded', inicio = () => {
     items.innerHTML = '';
@@ -19,8 +16,8 @@ document.addEventListener('DOMContentLoaded', inicio = () => {
 })
 
 
- 
-const valoresIni = () =>{
+
+const valoresIni = () => {
     if (localStorage.getItem('vidas') === null) {
         vida = 4;
         document.getElementById('vida').textContent = vida;
@@ -28,8 +25,8 @@ const valoresIni = () =>{
         vida = localStorage.getItem('vidas');
         document.getElementById('vida').textContent = vida;
     }
-    
-         
+
+
     if (localStorage.getItem('comprobar') === null) {
         control = [];
     } else {
@@ -41,13 +38,12 @@ const valoresIni = () =>{
 }
 
 const idAleatorio = () => {
-   
+
     if (control.length == 0) {//si el objeto control no tiene nada
         //lanza un aleatorio del 1 al 3
         let id = parseInt((Math.random() * (3 - 1 + 1)) + 1);
         //cargalo en el local storage para llevar el control
         control.push(id);
-        console.log(control)
         localStorage.setItem('comprobar', JSON.stringify(control));
         getData(id);
     } else if (control.length == 1) {//si el objeto control tiene cargado ya un numero
@@ -76,6 +72,9 @@ const idAleatorio = () => {
         localStorage.setItem('comprobar', JSON.stringify(control));
         getData(id);
         progresion(porcentaje);
+    } else if (control.length == 3) {
+        location.reload();
+        localStorage.clear();
     }
 }
 
@@ -87,7 +86,7 @@ const getData = async (id) => {//enviamos el id resultante de cada caso
 
 const pintarData = data => {
     items.innerHTML = '';
-    console.log(data);
+
     data.forEach(preg => {
         const { image, pregunta, op1, op2, op3 } = preg;
         template.getElementById('image').setAttribute('src', image);
@@ -107,53 +106,57 @@ const condicionales = () => {
     let option2 = document.getElementById('option2');
     let option3 = document.getElementById('option3');
 
-    
-
     option1.addEventListener('click', (e) => {
-        e.stopPropagation();
+
         pintarBoton();
+
         if (option1.textContent == "main") {
-            seleccion = true;
-            resolucion(seleccion);
-        }       
-        
+            localStorage.setItem('respuesta', 'correcto');
+        }else{
+            localStorage.setItem('respuesta', 'incorrecto');
+        }
+        e.stopPropagation();
     })
 
     option2.addEventListener('click', (e) => {
-        e.stopPropagation();
+
         pintarBoton();
+
         if (option2.textContent == "<script>" || option2.textContent == "Don’t repeat yourself") {
-            seleccion = true;
-            resolucion(seleccion);
+            localStorage.setItem('respuesta', 'correcto');
+        }else{
+            localStorage.setItem('respuesta', 'incorrecto');
         }
-        
+        e.stopPropagation();
     })
 
     option3.addEventListener('click', (e) => {
-        e.stopPropagation();
+
         pintarBoton();
-        
+        localStorage.setItem('respuesta', 'incorrecto');
+        e.stopPropagation();
     })
-   
-    resolucion();
-    
+
+    respuesta()
 }
 
-const resolucion = (select) => {
-    console.log(seleccion)
+const respuesta = () => {
 
-    comprobar.addEventListener('click', () => {
-
-        if(seleccion==true){
-            console.log('correcto')
-            location.reload();
-        }else{
+    comprobar.addEventListener('click', (e) => {
+        let res = localStorage.getItem('respuesta')
+        
+        if(res == 'incorrecto'){
             console.log('incorrecto')
+            localStorage.removeItem('respuesta');
             vida--
-            vidas(vida)
+            vidas(vida);
         }
-
-
+        if (res === 'correcto') {
+            console.log('correcto')
+            localStorage.removeItem('respuesta');
+            location.reload();
+        }
+        e.stopPropagation();
     })
 
 }

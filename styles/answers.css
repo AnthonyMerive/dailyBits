@@ -87,7 +87,7 @@ label:before{
 [type="radio"]:checked + label:before{
     content: '✔';
     text-align: center;
-    color: #2CB67D;
+    color: #2CB67D; 
 }
 
 #piePag {
