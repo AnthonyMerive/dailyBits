@@ -1,61 +1,98 @@
 {
-    "pregunta1": [
-        {
-            "id": 1,
-            "image": "./resources/answers/boy.png",
-            "pregunta": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
-            "op1": "main",
-            "op2": "section",
-            "op3": "header",
-            "respuesta": "main"
-        }
-    ],
-    "pregunta2": [
-        {
-            "id": 2,
-            "image": "./resources/answers/girl.png",
-            "pregunta": "¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript?",
-            "op1": "<br>",
-            "op2": "<script>",
-            "op3": "<styles>",
-            "respuesta": "<script>"
-        }
-    ],
-    "pregunta3": [
-        {
-            "id": 3,
-            "image": "./resources/answers/boy1.png",
-            "pregunta": "¿Qué significa DRY?",
-            "op1": "Don’t repeat yellow",
-            "op2": "Don’t repeat yourself",
-            "op3": "Don’t recicle year",
-            "respuesta": "Don’t repeat yourself"
-        }
-    ],
-    "pregunta4": [
-        {
-            "id": 4,
-            "image": "./resources/answers/boy1.png",
-            "pregunta": "pregunta 4",
-            "op1": "Don’t repeat yellow",
-            "op2": "Don’t repeat yourself",
-            "op3": "correcta",
-            "respuesta": "correcta"
-        }
-    ],
-    "pregunta5": [
-        {
-            "id": 5,
-            "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
-            "imageOp1": "./resources/answers/angular.png",
-            "imageOp2": "./resources/answers/vue.png",
-            "imageOp3": "./resources/answers/windows.png",
-            "imageOp4": "./resources/answers/kotlin.png",
-            "op1": "Angular",
-            "op2": "Vue.js",
-            "op3": "Windows",
-            "op4": "Kotlin",
-            "respuesta": "Vue.js"
-        }
-    ]
+  "pregunta1": [
+    {
+      "id": 1,
+      "image": "./resources/answers/boy.png",
+      "pregunta": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
+      "op1": "main",
+      "op2": "section",
+      "op3": "header",
+      "respuesta": "main"
+    }
+  ],
+  "pregunta2": [
+    {
+      "id": 2,
+      "image": "./resources/answers/girl.png",
+      "pregunta": "¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript?",
+      "op1": "<br>",
+      "op2": "<script>",
+      "op3": "<styles>",
+      "respuesta": "<script>"
+    }
+  ],
+  "pregunta3": [
+    {
+      "id": 3,
+      "image": "./resources/answers/boy1.png",
+      "pregunta": "¿Qué significa DRY?",
+      "op1": "Don’t repeat yellow",
+      "op2": "Don’t repeat yourself",
+      "op3": "Don’t recicle year",
+      "respuesta": "Don’t repeat yourself"
+    }
+  ],
+  "pregunta4": [
+    {
+      "id": 4,
+      "image": "./resources/answers/boy1.png",
+      "pregunta": "pregunta 4",
+      "op1": "Don’t repeat yellow",
+      "op2": "Don’t repeat yourself",
+      "op3": "correcta",
+      "respuesta": "correcta"
+    }
+  ],
+  "pregunta5": [
+    {
+      "id": 5,
+      "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
+      "imageOp1": "./resources/answers/angular.png",
+      "imageOp2": "./resources/answers/vue.png",
+      "imageOp3": "./resources/answers/windows.png",
+      "imageOp4": "./resources/answers/kotlin.png",
+      "op1": "Angular",
+      "op2": "Vue.js",
+      "op3": "Windows",
+      "op4": "Kotlin",
+      "respuesta": "Vue.js"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "usuario": "example@example.com",
+      "avance": [
+        2,
+        4
+      ],
+      "correctas": 5,
+      "incorrectas": 2,
+      "total": 7
+    },
+    {
+      "usuario": "anthony@example.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 2
+    },
+    {
+      "usuario": "jose@gmail.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 3
+    },
+    {
+      "usuario": "anthony_jc@example.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 4
+    }
+  ]
 }
