@@ -6,7 +6,8 @@
             "pregunta": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
             "op1": "main",
             "op2": "section",
-            "op3": "header"
+            "op3": "header",
+            "respuesta": "main"
         }
     ],
     "pregunta2": [
@@ -16,7 +17,8 @@
             "pregunta": "¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript?",
             "op1": "<br>",
             "op2": "<script>",
-            "op3": "<styles>"
+            "op3": "<styles>",
+            "respuesta": "<script>"
         }
     ],
     "pregunta3": [
@@ -26,7 +28,34 @@
             "pregunta": "¿Qué significa DRY?",
             "op1": "Don’t repeat yellow",
             "op2": "Don’t repeat yourself",
-            "op3": "Don’t recicle year"
+            "op3": "Don’t recicle year",
+            "respuesta": "Don’t repeat yourself"
+        }
+    ],
+    "pregunta4": [
+        {
+            "id": 4,
+            "image": "./resources/answers/boy1.png",
+            "pregunta": "pregunta 4",
+            "op1": "Don’t repeat yellow",
+            "op2": "Don’t repeat yourself",
+            "op3": "correcta",
+            "respuesta": "correcta"
+        }
+    ],
+    "pregunta5": [
+        {
+            "id": 5,
+            "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
+            "imageOp1": "./resources/answers/angular.png",
+            "imageOp2": "./resources/answers/vue.png",
+            "imageOp3": "./resources/answers/windows.png",
+            "imageOp4": "./resources/answers/kotlin.png",
+            "op1": "Angular",
+            "op2": "Vue.js",
+            "op3": "Windows",
+            "op4": "Kotlin",
+            "respuesta": "Vue.js"
         }
     ]
 }
