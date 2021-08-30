@@ -13,6 +13,11 @@ document.addEventListener('submit', async (e) => {
         alert('El usuario no esta registrado');
 
         } else {
-            alert('entrada')
+            localStorage.setItem('comprobar', JSON.stringify(buscar.avance))
+            localStorage.setItem('respCorrectas', buscar.correctas)
+            localStorage.setItem('respIncorrectas',buscar.incorrectas)
+            localStorage.setItem('respTotales',buscar.total)
+            localStorage.setItem('usuario',buscar.usuario)
+            location.href='./home.html'
     }
 })

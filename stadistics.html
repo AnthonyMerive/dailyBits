@@ -14,32 +14,39 @@
         <h5>Estadísticas</h5>
         
     </header>
+
     <main id="estadisticas">
-            <a href="#" id="tiempo">
+            
+
+    </main>
+
+    <template id="template">
+
+        <a href="#" id="tiempo">
             <img src="./resources/stadistics/time.png" alt="" srcset="">
             <strong>Tiempo de estudio (horas)</strong>
-            <span>1</span>
+            <span>-</span>
             </a>
 
             <a href="#" id="respContest">
             <img src="./resources/stadistics/message.png" alt="" srcset="">
             <strong>Respuestas contestadas</strong>
-            <span>40</span>
+            <span id="contestadas"></span>
             </a>
 
             <a href="#" id="respCorrect">
             <img src="./resources/stadistics/message.png" alt="" srcset="">
             <strong>Respuestas correctas</strong>
-            <span>20</span>
+            <span id="correctas"></span>
             </a>
 
             <a href="#" id="resIncorrect">
             <img src="./resources/stadistics/message.png" alt="" srcset="">
             <strong>Respuestas incorrectas</strong>
-            <span>20</span>
+            <span id="incorrectas"></span>
             </a>
 
-    </main>
+    </template>
 
     <footer id="piePag">
 
@@ -51,6 +58,7 @@
 
     </footer>
 
+    <script src="./scripts/stadistics.js"></script>
 </body>
 
 </html>

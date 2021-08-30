@@ -60,15 +60,16 @@
   ],
   "user": [
     {
-      "id": 1,
       "usuario": "example@example.com",
       "avance": [
         2,
-        4
+        4,
+        3
       ],
       "correctas": 5,
       "incorrectas": 2,
-      "total": 7
+      "total": 7,
+      "id": 1
     },
     {
       "usuario": "anthony@example.com",
