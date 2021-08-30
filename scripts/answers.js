@@ -13,7 +13,7 @@ let fragment = document.createDocumentFragment();
 let seleccion;
 let control = [];
 let porcentaje = 0;
-let vida = 0;
+let vida = localStorage.getItem('vidas');
 let correctas = localStorage.getItem('respCorrectas');
 let incorrectas = localStorage.getItem('respIncorrectas');
 let totales = localStorage.getItem('respTotales');
@@ -49,7 +49,6 @@ const idAleatorio = () => {
 
         let id = parseInt((Math.random() * (4 - 1 + 1)) + 1);
         control.push(id);
-        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
         localStorage.setItem('respTotales', parseInt(totales));
         getData(id);
@@ -66,7 +65,6 @@ const idAleatorio = () => {
 
         control.push(n);
         porcentaje = 25;
-        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
         localStorage.setItem('respTotales', parseInt(totales));
         getData(n);
@@ -85,7 +83,6 @@ const idAleatorio = () => {
         control.push(n);
         console.log(control)
         porcentaje = 50;
-        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
         localStorage.setItem('respTotales', parseInt(totales));
         getData(n);
@@ -103,7 +100,6 @@ const idAleatorio = () => {
 
         control.push(n);
         porcentaje = 75;
-        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
         localStorage.setItem('respTotales', parseInt(totales));
         getData(n);
@@ -147,11 +143,6 @@ const pintarDataSel = data => {
     condicionalSel();
 }
 
-const pintarDataDrag = data =>{
-    items.innerHTML = '';
-    console.log('es drag')
-}
-
 const pintarDataSelImg = data =>{
     items.innerHTML = '';
     
@@ -183,7 +174,7 @@ const pintarFin = () => {
     boton.textContent = 'VOLVER'
 
     boton.addEventListener('click', () =>{
-        localStorage.removeItem('comprobar');
+        localStorage.setItem('comprobar', JSON.stringify([]));
         localStorage.removeItem('vidas');
         location.href="./home.html"
     })
@@ -200,7 +191,7 @@ const pintarAgotado = () =>{
     boton.textContent = 'VOLVER'
 
     boton.addEventListener('click', () =>{
-        localStorage.removeItem('comprobar');
+        localStorage.setItem('comprobar', JSON.stringify([]));
         localStorage.removeItem('vidas');
         location.href="./home.html"
     })
@@ -326,6 +317,8 @@ const condicionalSelImg = () =>{
 const respuestaSel = () => {
 
     comprobar.addEventListener('click', (e) => {
+        totales++
+        localStorage.setItem('respTotales',parseInt(totales))
         let res = localStorage.getItem('respuesta')
 
         if (res == 'incorrecto') {
@@ -344,7 +337,8 @@ const respuestaSel = () => {
 }
 
 const respuestaSelImg = () => {
-
+    totales++
+    localStorage.setItem('respTotales',parseInt(totales))
     comprobar.addEventListener('click', (e) => {
         let res = localStorage.getItem('respuesta')
 

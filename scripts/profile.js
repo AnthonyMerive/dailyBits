@@ -19,6 +19,7 @@ document.addEventListener('click', async () =>{
     let respCorrectas = parseInt(localStorage.getItem('respCorrectas'));
     let respTotales = parseInt(localStorage.getItem('respTotales'));
     let respIncorrectas = parseInt(localStorage.getItem('respIncorrectas'));
+    let vida = parseInt(localStorage.getItem('vidas'));
     let control = JSON.parse(localStorage.getItem('comprobar'));
 
     let resp = await fetch('http://localhost:4000/user')
@@ -32,7 +33,8 @@ document.addEventListener('click', async () =>{
             avance: control,
             correctas: respCorrectas,
             incorrectas: respIncorrectas,
-            total: respTotales
+            total: respTotales,
+            vidas: vida
         }),
         headers: {
             "Content-Type": "application/json; charset=UTF-8"

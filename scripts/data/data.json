@@ -66,6 +66,7 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 2
     },
     {
@@ -74,6 +75,7 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 3
     },
     {
@@ -82,6 +84,7 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 4
     },
     {
@@ -92,6 +95,7 @@
       "correctas": 5,
       "incorrectas": 2,
       "total": 21,
+      "vidas": 4,
       "id": 5
     },
     {
@@ -100,6 +104,7 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 6
     },
     {
@@ -108,6 +113,7 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 7
     },
     {
@@ -116,14 +122,19 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 8
     },
     {
       "usuario": "tony@hotmail.com",
-      "avance": [],
-      "correctas": 0,
-      "incorrectas": 0,
-      "total": 0,
+      "avance": [
+        4,
+        3
+      ],
+      "correctas": 2,
+      "incorrectas": 3,
+      "total": 5,
+      "vidas": 4,
       "id": 9
     },
     {
@@ -132,6 +143,7 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 10
     },
     {
@@ -140,6 +152,7 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 11
     },
     {
@@ -148,22 +161,25 @@
       "correctas": 0,
       "incorrectas": 0,
       "total": 0,
+      "vidas": 4,
       "id": 12
     },
     {
       "usuario": "a@a.a",
-      "avance": null,
-      "correctas": 2,
-      "incorrectas": 2,
-      "total": 4,
+      "avance": [],
+      "correctas": 8,
+      "incorrectas": 8,
+      "total": 25,
+      "vidas": null,
       "id": 13
     },
     {
       "usuario": "anthony@anthony.com",
       "avance": [],
-      "correctas": 0,
-      "incorrectas": 0,
-      "total": 0,
+      "correctas": 3,
+      "incorrectas": 2,
+      "total": 4,
+      "vidas": 4,
       "id": 14
     }
   ]

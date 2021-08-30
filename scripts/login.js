@@ -19,6 +19,7 @@ document.addEventListener('submit', async (e) => {
             localStorage.setItem('respIncorrectas',buscar.incorrectas)
             localStorage.setItem('respTotales',buscar.total)
             localStorage.setItem('usuario',buscar.usuario)
+            localStorage.setItem('vidas',buscar.vidas)
             location.href='./home.html'
     }
 })
