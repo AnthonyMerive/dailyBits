@@ -37,6 +37,7 @@ body{
 }
 
 #perfil a{
+    cursor: pointer;
     text-decoration: none;
     margin-top:50px;
     font-weight: 600;

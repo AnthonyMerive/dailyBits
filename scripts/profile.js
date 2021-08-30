@@ -39,7 +39,7 @@ document.addEventListener('click', async () =>{
         }
     })
     localStorage.clear();
-    location.href="./login.html"
+    location.href="./logo.html"
 
 
 })

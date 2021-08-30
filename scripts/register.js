@@ -23,8 +23,10 @@ document.addEventListener('submit', async (e) => {
                 "Content-Type": "application/json; charset=UTF-8"
             }
         })
+        location.href='./login.html'
         alert('usuario creado satisfactoriamente');
         
+
      } else {
 
         alert('Este correo ya esta siendo usado')

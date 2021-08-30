@@ -35,17 +35,6 @@
   "pregunta4": [
     {
       "id": 4,
-      "image": "./resources/answers/boy1.png",
-      "pregunta": "pregunta 4",
-      "op1": "Don’t repeat yellow",
-      "op2": "Don’t repeat yourself",
-      "op3": "correcta",
-      "respuesta": "correcta"
-    }
-  ],
-  "pregunta5": [
-    {
-      "id": 5,
       "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
       "imageOp1": "./resources/answers/angular.png",
       "imageOp2": "./resources/answers/vue.png",
@@ -63,12 +52,12 @@
       "usuario": "example@example.com",
       "avance": [
         2,
-        4,
-        3
+        3,
+        4
       ],
-      "correctas": 5,
-      "incorrectas": 2,
-      "total": 7,
+      "correctas": 6,
+      "incorrectas": 7,
+      "total": 15,
       "id": 1
     },
     {
@@ -94,6 +83,88 @@
       "incorrectas": 0,
       "total": 0,
       "id": 4
+    },
+    {
+      "usuario": "anthony_jc18@hotmail.com",
+      "avance": [
+        1
+      ],
+      "correctas": 5,
+      "incorrectas": 2,
+      "total": 21,
+      "id": 5
+    },
+    {
+      "usuario": "anthony8@hotmail.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 6
+    },
+    {
+      "usuario": "anthony@hotmail.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 7
+    },
+    {
+      "usuario": "nayrivera7@gmail.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 8
+    },
+    {
+      "usuario": "tony@hotmail.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 9
+    },
+    {
+      "usuario": "assas@asas.as",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 10
+    },
+    {
+      "usuario": "asas@as.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 11
+    },
+    {
+      "usuario": "anthonyasa@hotmail.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 12
+    },
+    {
+      "usuario": "a@a.a",
+      "avance": null,
+      "correctas": 2,
+      "incorrectas": 2,
+      "total": 4,
+      "id": 13
+    },
+    {
+      "usuario": "anthony@anthony.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "id": 14
     }
   ]
 }

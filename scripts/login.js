@@ -1,5 +1,5 @@
 let URL = 'http://localhost:4000/user';
-
+localStorage.clear();
 document.addEventListener('submit', async (e) => {
     e.preventDefault();
     let correo = document.getElementById('correo').value;
@@ -11,6 +11,7 @@ document.addEventListener('submit', async (e) => {
     if (buscar == undefined) {
 
         alert('El usuario no esta registrado');
+        location.href='./register.html'
 
         } else {
             localStorage.setItem('comprobar', JSON.stringify(buscar.avance))

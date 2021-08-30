@@ -2,6 +2,8 @@ let templateSel = document.getElementById('templateSel').content;
 let templateSelImg = document.getElementById('templateSelImg').content;
 let templateGood = document.getElementById('good').content;
 let templateBad = document.getElementById('bad').content;
+let templateFinish = document.getElementById('finish').content;
+let templateAgotado = document.getElementById('agotado').content;
 
 let items = document.getElementById('items');
 let footer = document.getElementById('footer');
@@ -12,6 +14,9 @@ let seleccion;
 let control = [];
 let porcentaje = 0;
 let vida = 0;
+let correctas = localStorage.getItem('respCorrectas');
+let incorrectas = localStorage.getItem('respIncorrectas');
+let totales = localStorage.getItem('respTotales');
 
 
 document.addEventListener('DOMContentLoaded', inicio = () => {
@@ -45,9 +50,11 @@ const idAleatorio = () => {
 
     if (control.length == 0) {
 
-        let id = parseInt((Math.random() * (5 - 1 + 1)) + 1);
+        let id = parseInt((Math.random() * (4 - 1 + 1)) + 1);
         control.push(id);
+        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
+        localStorage.setItem('respTotales', parseInt(totales));
         getData(id);
 
     } else if (control.length == 1) {
@@ -56,13 +63,15 @@ const idAleatorio = () => {
         let id = localStorage.getItem('comprobar');
         id = JSON.parse(id);
 
-        do { n = parseInt((Math.random() * (5 - 1 + 1)) + 1); }
+        do { n = parseInt((Math.random() * (4 - 1 + 1)) + 1); }
 
         while (control[0] == n);
 
         control.push(n);
-        porcentaje = 20;
+        porcentaje = 25;
+        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
+        localStorage.setItem('respTotales', parseInt(totales));
         getData(n);
         progresion(porcentaje);
 
@@ -72,14 +81,16 @@ const idAleatorio = () => {
         let id = localStorage.getItem('comprobar');
         id = JSON.parse(id);
 
-        do { n = parseInt((Math.random() * (5 - 1 + 1)) + 1); }
+        do { n = parseInt((Math.random() * (4 - 1 + 1)) + 1); }
 
         while (control[0] == n || control[1] == n);
 
         control.push(n);
         console.log(control)
-        porcentaje = 40;
+        porcentaje = 50;
+        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
+        localStorage.setItem('respTotales', parseInt(totales));
         getData(n);
         progresion(porcentaje);
 
@@ -89,45 +100,35 @@ const idAleatorio = () => {
         let id = localStorage.getItem('comprobar');
         id = JSON.parse(id);
 
-        do { n = parseInt((Math.random() * (5 - 1 + 1)) + 1); }
+        do { n = parseInt((Math.random() * (4 - 1 + 1)) + 1); }
 
         while (control[0] == n || control[1] == n || control[2] == n);
 
         control.push(n);
-        porcentaje = 60;
+        porcentaje = 75;
+        totales++
         localStorage.setItem('comprobar', JSON.stringify(control));
+        localStorage.setItem('respTotales', parseInt(totales));
         getData(n);
         progresion(porcentaje);
 
     } else if (control.length == 4) {
-
-        let n = 0;
-        let id = localStorage.getItem('comprobar');
-        id = JSON.parse(id);
-
-        do { n = parseInt((Math.random() * (5 - 1 + 1)) + 1); }
-
-        while (control[0] == n || control[1] == n || control[2] == n || control[3] == n);
-
-        control.push(n);
-        porcentaje = 80;
-        localStorage.setItem('comprobar', JSON.stringify(control));
-        getData(n);
+        porcentaje = 100;
         progresion(porcentaje);
+        pintarFin();
+
     }
 
 
 
 }
-const getData = async (id) => {//enviamos el id resultante de cada caso
+const getData = async (id) => {
     let res = await fetch(`http://localhost:4000/pregunta${id}`)
     let preg = await res.json();
 
     if (id > 0 && id <= 3) {
         pintarDataSel(preg);
     }else if (id == 4){
-        pintarDataDrag(preg);
-    }else if (id == 5){
         pintarDataSelImg(preg);
     }
 }
@@ -173,6 +174,39 @@ const pintarDataSelImg = data =>{
     })
     items.appendChild(fragment);
     condicionalSelImg();
+}
+
+const pintarFin = () => {
+    items.innerHTML = '';
+    fragment.appendChild(templateFinish);
+    items.appendChild(fragment);
+
+    let boton = document.querySelector('.comprobar');
+    boton.setAttribute('id', 'finish');
+    boton.textContent = 'VOLVER'
+
+    boton.addEventListener('click', () =>{
+        localStorage.removeItem('comprobar');
+        localStorage.removeItem('vidas');
+        location.href="./home.html"
+    })
+
+}
+
+const pintarAgotado = () =>{
+    items.innerHTML = '';
+    fragment.appendChild(templateAgotado);
+    items.appendChild(fragment);
+
+    let boton = document.querySelector('.comprobar');
+    boton.setAttribute('id', 'bad');
+    boton.textContent = 'VOLVER'
+
+    boton.addEventListener('click', () =>{
+        localStorage.removeItem('comprobar');
+        localStorage.removeItem('vidas');
+        location.href="./home.html"
+    })
 }
 
 const condicionalSel = () => {
@@ -293,8 +327,6 @@ const condicionalSelImg = () =>{
 }
 
 
-//--------------
-
 const respuestaSel = () => {
 
     comprobar.addEventListener('click', (e) => {
@@ -341,6 +373,8 @@ const correcto = () => {
     footer.innerHTML = '';
     fragment.appendChild(templateGood);
     footer.appendChild(fragment);
+    correctas++
+    localStorage.setItem('respCorrectas', parseInt(correctas));
     let continuar = document.getElementById('continue');
     continuar.addEventListener('click', () => {
         location.reload();
@@ -358,6 +392,8 @@ const incorrectoSel = () => {
     templateBad.querySelector('span').textContent = r;
     fragment.appendChild(templateBad);
     footer.appendChild(fragment);
+    incorrectas++
+    localStorage.setItem('respIncorrectas', parseInt(incorrectas));
     let continuar = document.getElementById('inContinue');
     continuar.addEventListener('click', () => {
         location.reload();
@@ -374,6 +410,8 @@ const incorrectoSelImg = () => {
     templateBad.querySelector('span').textContent = r;
     fragment.appendChild(templateBad);
     footer.appendChild(fragment);
+    incorrectas++
+    localStorage.setItem('respIncorrectas', parseInt(incorrectas));
     let continuar = document.getElementById('inContinue');
     continuar.addEventListener('click', () => {
         location.reload();
@@ -391,8 +429,7 @@ const progresion = (porcentaje) => {
 const vidas = (vida) => {
     if (vida <= 0) {
         console.log('Game Over')
-        localStorage.clear();
-        window.location.href = './home.html'
+        pintarAgotado();
     } else {
         document.getElementById('vida').textContent = vida;
         localStorage.setItem('vidas', vida);
