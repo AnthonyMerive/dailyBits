@@ -18,13 +18,10 @@ let correctas = localStorage.getItem('respCorrectas');
 let incorrectas = localStorage.getItem('respIncorrectas');
 let totales = localStorage.getItem('respTotales');
 
-
 document.addEventListener('DOMContentLoaded', inicio = () => {
     items.innerHTML = '';
     valoresIni();
 })
-
-
 
 const valoresIni = () => {
     if (localStorage.getItem('vidas') === null) {
@@ -325,7 +322,6 @@ const condicionalSelImg = () =>{
 
     respuestaSelImg();
 }
-
 
 const respuestaSel = () => {
 
