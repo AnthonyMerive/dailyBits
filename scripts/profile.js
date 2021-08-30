@@ -38,6 +38,8 @@ document.addEventListener('click', async () =>{
             "Content-Type": "application/json; charset=UTF-8"
         }
     })
+    localStorage.clear();
+    location.href="./login.html"
 
 
 })
