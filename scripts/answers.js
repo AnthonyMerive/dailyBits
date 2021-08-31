@@ -175,7 +175,8 @@ const pintarFin = () => {
 
     boton.addEventListener('click', () =>{
         localStorage.setItem('comprobar', JSON.stringify([]));
-        localStorage.removeItem('vidas');
+        vida = 4;
+        localStorage.setItem('vidas', vida);
         location.href="./home.html"
     })
 
@@ -189,10 +190,11 @@ const pintarAgotado = () =>{
     let boton = document.querySelector('.comprobar');
     boton.setAttribute('id', 'bad');
     boton.textContent = 'VOLVER'
-
+    document.getElementById('vida').textContent = 0;
     boton.addEventListener('click', () =>{
         localStorage.setItem('comprobar', JSON.stringify([]));
-        localStorage.removeItem('vidas');
+        vida = 4;
+        localStorage.setItem('vidas', vida);
         location.href="./home.html"
     })
 }
