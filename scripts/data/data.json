@@ -50,10 +50,14 @@
   "user": [
     {
       "usuario": "example@example.com",
-      "avance": [],
-      "correctas": 13,
-      "incorrectas": 16,
-      "total": 33,
+      "avance": [
+        1,
+        2,
+        4
+      ],
+      "correctas": 15,
+      "incorrectas": 33,
+      "total": 61,
       "vidas": 4,
       "id": 1
     },
