@@ -91,11 +91,11 @@
     {
       "usuario": "anthony_jc18@hotmail.com",
       "avance": [
-        1
+        2
       ],
       "correctas": 5,
-      "incorrectas": 2,
-      "total": 21,
+      "incorrectas": 8,
+      "total": 29,
       "vidas": 4,
       "id": 5
     },
@@ -182,6 +182,29 @@
       "total": 4,
       "vidas": 4,
       "id": 14
+    },
+    {
+      "usuario": "new@new.com",
+      "avance": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "correctas": 1,
+      "incorrectas": 2,
+      "total": 3,
+      "vidas": null,
+      "id": 15
+    },
+    {
+      "usuario": "d@d.com",
+      "avance": [],
+      "correctas": 0,
+      "incorrectas": 0,
+      "total": 0,
+      "vidas": 4,
+      "id": 16
     }
   ]
 }

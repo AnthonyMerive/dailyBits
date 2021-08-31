@@ -17,7 +17,8 @@ document.addEventListener('submit', async (e) => {
                 avance: [],
                 correctas: 0,
                 incorrectas: 0,
-                total: 0
+                total: 0,
+                vidas: 4
             }),
             headers: {
                 "Content-Type": "application/json; charset=UTF-8"

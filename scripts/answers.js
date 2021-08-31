@@ -427,4 +427,3 @@ const vidas = (vida) => {
         localStorage.setItem('vidas', vida);
     }
 }
-
